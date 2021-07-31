@@ -37,4 +37,5 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 find_package(OpenGL COMPONENTS OpenGL REQUIRED)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE OpenGL::GL SDL2-static)
+target_link_libraries(${PROJECT_NAME} PRIVATE SDL2_image)
 target_link_libraries(${PROJECT_NAME} PRIVATE box2d)
