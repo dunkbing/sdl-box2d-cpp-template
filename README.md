@@ -1,0 +1,1 @@
+## A c++ template with combination of sdl and box2d for making games, using git sumodule as dependency manager.
