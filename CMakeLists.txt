@@ -10,8 +10,17 @@ endif()
 
 # find_package(SDL2 REQUIRED)
 # include_directories(${SDL2_INCLUDE_DIRS})
+
+FILE(
+    GLOB src "src/*.h" "src/*.hpp" "src/*.c" "src/*.cpp"
+)
+# Copy resource files
+FILE(COPY "${CMAKE_CURRENT_SOURCE_DIR}/res/" DESTINATION "${CMAKE_BINARY_DIR}/res/")
+
 # Define the executable.
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(
+    ${PROJECT_NAME} ${src}
+)
 
 # Set C++ standard.
 set_target_properties(${PROJECT_NAME} PROPERTIES
